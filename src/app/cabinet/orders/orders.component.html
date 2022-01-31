@@ -1,0 +1,369 @@
+<header class="app-header">
+  <div class="app-header__icon">
+    <i class="fas fa-bookmark"></i>
+  </div>
+  <div class="app-header__text">
+    <h2 class="app-header__heading">Таблица заказов</h2>
+    <p class="app-header__description">Жд веб сайты зарегистрированные заказов</p>
+  </div>
+  <div class="app-header__filter">
+    <button class="btn btn-primary me-2">
+      <i class="fas fa-filter me-2"></i>
+      <span>Фильтр</span>
+    </button>
+    <button class="btn btn-warning">
+      <i class="fas fa-trash me-2"></i>
+      <span>Очистить</span>
+    </button>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="app-card">
+    <div class="statistic">
+      <div class="statistic__header">
+        <h2 class="statistic__heading">Баланс по каждому платежу (со страховкой)</h2>
+
+        <div class="statistic__filter">
+          <label class="me-4" for="from-date">
+            <span class="me-1">От: </span>
+            <input class="form-control" id="from-date" type="date">
+          </label>
+          <label class="me-4" for="to-date">
+            <span class="me-1">До: </span>
+            <input class="form-control" id="to-date" type="date">
+          </label>
+          <button class="btn btn-outline-dark">Считать</button>
+        </div>
+      </div>
+      <div class="statistic__body row">
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-success">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-success">HAMKORBANK</div>
+            <div class="statistic__value">5,298,000 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">KAPITALBANK</div>
+            <div class="statistic__value">0 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-info">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-info">PAYME</div>
+            <div class="statistic__value">19,152,000 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-danger">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-danger">STRIPE</div>
+            <div class="statistic__value">1,107,000 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">CLICK</div>
+            <div class="statistic__value">0 сум</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="statistic">
+      <div class="statistic__header">
+        <h2 class="statistic__heading">Сумма страховки по каждому платежу</h2>
+      </div>
+      <div class="statistic__body row">
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-success">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-success">HAMKORBANK</div>
+            <div class="statistic__value">2,686,631,570 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">KAPITALBANK</div>
+            <div class="statistic__value">34,433,850 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-info">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-info">PAYME</div>
+            <div class="statistic__value">8,902,039,360 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-danger">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-danger">STRIPE</div>
+            <div class="statistic__value">£ 34355.58</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">CLICK</div>
+            <div class="statistic__value">0 сум</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-card">
+    <div class="data-filter">
+      <div class="data-filter__part">
+        <label for="count">На одной странице: </label>
+        <select class="form-control" name="count" id="count">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <div class="data-filter__part">
+        <label for="search">Поиск: </label>
+        <input class="form-control" id="search" type="text">
+      </div>
+    </div>
+    <table class="data-table table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>ID заказа</th>
+        <th>ID Express</th>
+        <th>Дата создания</th>
+        <th>Направление</th>
+        <th>Статус заказа</th>
+        <th>Тип оплаты</th>
+        <th>Общая стоимость</th>
+        <th>Со страховкой</th>
+        <th>Имя пользователя</th>
+        <th>Устройство</th>
+        <th>Действие</th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let order of orders">
+        <tr>
+          <td
+            class="details-control"
+            [class.details-control--close]="order.open"
+            (click)="order.open = !order.open">
+          </td>
+          <td>{{ order.identifier }}</td>
+          <td>{{ order.gateExpressIds }}</td>
+          <td>{{ order.createTime }}</td>
+          <td>
+            <div
+              class="badge"
+              [ngClass]="{
+                 'bg-info': order.directionType === 'Forward',
+                 'bg-primary': order.directionType === 'Both'
+              }">
+              {{ order.directionType === 'Forward' ? 'ТУДА' : 'ТУДА-ОБРАТНО' }}
+            </div>
+          </td>
+          <td>
+            <div
+              class="badge text-uppercase"
+              [ngClass]="{
+                'bg-info': order.orderStatus === 'DoOrder' || order.orderStatus === 'DoReservation'
+                || order.orderStatus === 'DoSetAutoReject' || order.orderStatus === 'SetAutoRejectSuccess'
+                || order.orderStatus === 'ChoicePaymentType' || order.orderStatus === 'DoCloseP10FormRejectOrder'
+                || order.orderStatus === 'DoExpiredTimeOrder' || order.orderStatus === 'DoTicketReject'
+                || order.orderStatus === 'DoPaymentSystem' || order.orderStatus === 'PaymentSystemSuccess'
+                || order.orderStatus === 'DoExpressStatus' || order.orderStatus === 'DoRegisterTicket'
+                || order.orderStatus === 'FinishedOrderCloseP10Form' || order.orderStatus === 'FinishedOrderExpiredTime'
+                || order.orderStatus === 'RevertConfirmPaymentSuccess' || order.orderStatus === 'DoOrderTicketReturn',
+                'bg-danger': order.orderStatus === 'DoOrderValidationError' || order.orderStatus === 'ReservationError'
+                || order.orderStatus === 'SetAutoRejectError' || order.orderStatus === 'TicketRejectError'
+                || order.orderStatus === 'PaymentSystemError' || order.orderStatus === 'PaymentErrorProxy'
+                || order.orderStatus === 'ExpressStatusError' || order.orderStatus === 'RegisterTicketError'
+                || order.orderStatus === 'OrderRevertConformPaymentFail' || order.orderStatus === 'FinishedOrderReservationFail'
+                || order.orderStatus === 'FinishedOrderSetAutoRejectFail' || order.orderStatus === 'FinishedOrderPaymentFail'
+                || order.orderStatus === 'FinishedOrderConfirmPaymentProxyFail' || order.orderStatus === 'RevertConfirmPaymentError'
+                || order.orderStatus === 'OrderTicketReturnError' || order.orderStatus === 'ReturnOrderFromProxy'
+                || order.orderStatus === 'ReturnSomeTicketsFromProxy' || order.orderStatus === 'ManualCanceledP10Order'
+                || order.orderStatus === 'BlockExternalApiOrder' || order.orderStatus === 'RollbackOrder',
+                'bg-success': order.orderStatus === 'ReservationSuccess' || order.orderStatus === 'TicketRejectSuccess'
+                || order.orderStatus === 'DoPaymentProxy' || order.orderStatus === 'PaymentSuccessProxy'
+                || order.orderStatus === 'ExpressStatusSuccess' || order.orderStatus === 'RegisterTicketSuccess'
+                || order.orderStatus === 'OrderRevertConfirmPaymentOk' || order.orderStatus === 'FinishedSuccessOrder'
+                || order.orderStatus === 'OrderTicketReturnSuccess' || order.orderStatus === 'FinishedSuccessOrder',
+                'bg-primary': order.orderStatus === 'PaymentEntityCreated',
+                'bg-secondary': order.orderStatus === 'FinishedOrderWithUnknownStatus' || order.orderStatus === 'UnBlockExternalApiOrder'
+              }"
+            >
+              {{
+                order.orderStatus === 'DoOrder' ? 'Выполнение заказа' : order.orderStatus === 'DoOrderValidationError' ?
+                'Ошибка Выполнении заказа' : order.orderStatus === 'DoReservation' ? 'Выполнение резервации' : order.orderStatus === 'ReservationSuccess' ?
+                'Успешная резервация' : order.orderStatus === 'ReservationError' ? 'Ошыбка резервации' : order.orderStatus === 'DoSetAutoReject' ? 'Установление авто отклонении' :
+                order.orderStatus === 'SetAutoRejectSuccess' ? 'Установление успешного авто отклонении' : order.orderStatus === 'SetAutoRejectError' ? 'Ошибка при Установлении авто отклонения' :
+                order.orderStatus === 'ChoicePaymentType' ? 'Выбор способа оплаты' : order.orderStatus === 'PaymentEntityCreated' ? 'Платежный объект создан' :
+                order.orderStatus === 'DoCloseP10FormRejectOrder' ? 'Успешное закрытие П10 формы и отклонение заказа' : order.orderStatus === 'DoExpiredTimeOrder' ? 'Указание истекшего времени заказа' :
+                order.orderStatus === 'DoTicketReject' ? 'Отклонение билета' : order.orderStatus === 'TicketRejectSuccess' ? 'Успешное отклонение билета' :
+                order.orderStatus === 'TicketRejectError' ? 'Ошибка при отклонении билета' : order.orderStatus === 'DoPaymentSystem' ? 'Выполнение связки с платежной системой' :
+                order.orderStatus === 'PaymentSystemSuccess' ? 'Успешное выполнение платежа с платежной системой' : order.orderStatus === 'PaymentSystemError' ? 'Ошибка при выполнении платежа с платежной системой' :
+                order.orderStatus === 'DoPaymentProxy' ? 'Выполнение оплаты Proxy' : order.orderStatus === 'PaymentSuccessProxy' ? 'Успешная оплата Proxy' :
+                order.orderStatus === 'PaymentErrorProxy' ? 'Ошибка при оплаты Proxy' : order.orderStatus === 'DoExpressStatus' ? 'Выполнение статуса Express' :
+                order.orderStatus === 'ExpressStatusSuccess' ? 'Express Статус Успешен' : order.orderStatus === 'ExpressStatusError' ? 'Express Статус Ошибка' :
+                order.orderStatus === 'DoRegisterTicket' ? 'Регистрация билета' : order.orderStatus === 'RegisterTicketSuccess' ? 'Успешная регистрация билета' :
+                order.orderStatus === 'RegisterTicketError' ? 'Ошыбка при регистрации билета' : order.orderStatus === 'OrderRevertConfirmPaymentOk' ? 'Успешный возврат заказа подтверждение оплаты' :
+                order.orderStatus === 'OrderRevertConformPaymentFail' ? 'Ошыбка при возврат заказа подтверждение оплаты' : order.orderStatus === 'FinishedSuccessOrder' ? 'Завершенный Успешный Заказ' :
+                order.orderStatus === 'FinishedOrderReservationFail' ? 'Завершение заказа с ошибкой резервации' : order.orderStatus === 'FinishedOrderSetAutoRejectFail' ? 'Завершение заказа с ошибкой при установление авто отклонения' :
+                order.orderStatus === 'FinishedOrderPaymentFail' ? 'Завершение заказа с ошибкой при выполнение платежа' : order.orderStatus === 'FinishedOrderSetAutoRejectFail' ? 'Завершение заказа с ошибкой при установление авто отклонения' :
+                order.orderStatus === 'FinishedOrderConfirmPaymentProxyFail' ? 'Завершение заказа с ошибкой при возврате подтвержденной оплаты' : order.orderStatus === 'FinishedOrderCloseP10Form' ? 'Законченный заказ с закрытой формой P10' :
+                order.orderStatus === 'FinishedOrderWithUnknownStatus' ? 'Завершение заказа с процессом неизвестного статуса' : order.orderStatus === 'FinishedOrderExpiredTime' ? 'завершение заказа с истечением ожидании оплаты до 15 минут' :
+                order.orderStatus === 'RevertConfirmPaymentSuccess' ? 'Успешное восстановление подтверждение оплаты' : order.orderStatus === 'RevertConfirmPaymentError' ? 'Ошыбка при восстановлении подтверждение оплаты' :
+                order.orderStatus === 'DoOrderTicketReturn' ? 'Выполнение возврата билета в заказе' : order.orderStatus === 'OrderTicketReturnSuccess' ? 'Успешное выполнение возврата билета в заказе' :
+                order.orderStatus === 'OrderTicketReturnError' ? 'Ошыбка при выполнении возврата билета в заказе' : order.orderStatus === 'ReturnOrderFromProxy' ? 'Возврат заказа из Proxy' :
+                order.orderStatus === 'ReturnSomeTicketsFromProxy' ? 'Возврат некоторых билетов из Proxy' : order.orderStatus === 'ManualCanceledP10Order' ? 'Заказ P10 отменен вручную' :
+                order.orderStatus === 'BlockExternalApiOrder' ? 'Заблокировать внешний Api заказа' : order.orderStatus === 'UnBlockExternalApiOrder' ? 'разблокировать внешний Api заказа' : 'Откат заказа'
+              }}
+            </div>
+          </td>
+          <td>{{ order.paymentType }}</td>
+          <td>{{ order.totalCost }} сум</td>
+          <td>{{ order.withInsurance ? 'Да' : 'Нет' }}</td>
+          <td>{{ order.username }}</td>
+          <td>
+            <div
+              class="btn btn-sm btn-outline-primary">
+              {{ order.deviceInfo.deviceType }}
+            </div>
+          </td>
+          <td>
+            <a class="data-action" title="Посмотреть" routerLink="/cabinet/orders/{{ order.identifier }}">
+              <i class="fas fa-clipboard"></i>
+            </a>
+          </td>
+        </tr>
+        <tr *ngIf="order.open">
+          <td colspan="12">
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <td>#</td>
+                <td>ID под-заказа</td>
+                <td>Exp-ID заказа</td>
+                <td>Взрослые</td>
+                <td>Дети</td>
+                <td>Направление</td>
+                <td>Стоимость</td>
+                <td>Доп-инфо</td>
+                <td>Статус заказа</td>
+                <td>Действие</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of order.orderItems; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ item.identifier }}</td>
+                <td>{{ item.exspOrderID }}</td>
+                <td>{{ item.adultPass }}</td>
+                <td>{{ item.adultPass }}</td>
+                <td>
+                  <div
+                    class="badge"
+                    [ngClass]="{
+                      'bg-info': item.directionType === 'Forward',
+                      'bg-secondary': item.directionType === 'Backward'
+                    }"
+                  >
+                    {{ item.directionType === 'Forward' ? 'ТУДА': 'ОБРАТНО' }}
+                  </div>
+                </td>
+                <td>{{ item.totalCost }} сум</td>
+                <td>{{ item.additionalInfo }}</td>
+                <td>
+                  <button class="btn btn-sm btn-outline-info">
+                    <i class="fas fa-redo"></i>
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-outline-warning">
+                    <i class="fas fa-download"></i>
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </ng-container>
+      </tbody>
+      <tfoot>
+      <tr>
+        <th>#</th>
+        <th>ID заказа</th>
+        <th>ID Express</th>
+        <th>Дата создания</th>
+        <th>Направление</th>
+        <th>Статус заказа</th>
+        <th>Тип оплаты</th>
+        <th>Общая стоимость</th>
+        <th>Со страховкой</th>
+        <th>Имя пользователя</th>
+        <th>Устройство</th>
+        <th>Действие</th>
+      </tr>
+      </tfoot>
+    </table>
+    <div class="data-total">
+      <div class="data-total__part">
+        10 заказов на каждой странице. Общее количество заказов 234423
+      </div>
+
+      <div class="data-total__part">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Предыдущий</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Следующий</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>
+

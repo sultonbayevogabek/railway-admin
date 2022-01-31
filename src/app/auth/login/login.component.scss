@@ -1,0 +1,74 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: auto;
+}
+
+.login__card {
+  width: 500px;
+  max-width: 100%;
+  margin-bottom: 28px;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+  background-clip: padding-box;
+  box-shadow: 0 0.76875rem 2.4875rem rgb(52 58 64 / 30%), 0 1.3375rem 1.70625rem rgb(52 58 64 / 30%), 0 0.55rem 0.53125rem rgb(0 0 0 / 5%), 0 0.225rem 0.4375rem rgb(52 58 64 / 30%);
+}
+
+.form__body, .form__footer {
+  padding: 16px;
+}
+
+.form__heading {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  text-align: center;
+
+  div:first-child {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #495057;
+    opacity: 0.6;
+  }
+
+  div:last-child {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #495057;
+  }
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.form__input {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #495057;
+}
+
+.form__footer {
+  border-top: 1px solid #e9ecef;
+}
+
+.form__submit {
+  display: block;
+  margin-left: auto;
+  font-weight: 500;
+}
+
+.login__copy {
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}

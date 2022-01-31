@@ -1,0 +1,85 @@
+<header class="app-header">
+  <div class="app-header__icon">
+    <i class="fas fa-cloud"></i>
+  </div>
+  <div class="app-header__text">
+    <h2 class="app-header__heading">Добавить приход товар</h2>
+  </div>
+</header>
+<main class="app-main">
+  <form class="app-card">
+    <h3 class="app-card__heading mb-2">Поставщик</h3>
+    <div class="row mb-3">
+      <div class="col-6">
+        <select class="form-control">
+          <option value="-1">Выберите поставщика</option>
+          <option value="93084d72-37bd-4f93-af17-41e5e3ebf3b8">Рашидов Азизбек - tystashkent@inbox.uz</option>
+        </select>
+      </div>
+    </div>
+    <h3 class="app-card__heading mb-2">Товары</h3>
+    <table class="data-table table table-bordered">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Выберите товара</th>
+        <th>Сериал номер</th>
+        <th>Диапазон от</th>
+        <th>Диапазон до</th>
+        <th>Количество</th>
+        <th>Удалить</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td>
+          <select class="form-control">
+            <option value="-1">Выберите товара</option>
+            <option value="93084d72-37bd-4f93-af17-41e5e3ebf3b8">Страховой полис - JD2020INCUZ</option>
+          </select>
+        </td>
+        <td>
+          <input class="form-control" type="text" placeholder="Сериал номер">
+        </td>
+        <td>
+          <input class="form-control" type="number" placeholder="Диапазон от">
+        </td>
+        <td>
+          <input class="form-control" type="number" placeholder="Диапазон до">
+        </td>
+        <td>
+          <input class="form-control" type="number" placeholder="Количество">
+        </td>
+        <td>
+          <button class="btn btn-danger btn-sm" title="Удалить">
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-center" colspan="7">
+          <button class="btn btn-success" type="button">
+            <i class="fas fa-plus-circle me-2"></i>
+            <span>Добавить</span>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-2">
+        <button class="btn btn-primary w-100" type="submit">
+          <i class="fas fa-save me-2"></i>
+          <span>Сохранить</span>
+        </button>
+      </div>
+      <div class="col-2">
+        <a class="btn btn-warning w-100" routerLink="/cabinet/stations">
+          <i class="fas fa-arrow-left me-2"></i>
+          <span>Назад</span>
+        </a>
+      </div>
+    </div>
+  </form>
+</main>

@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="admin-info">
+    <div class="admin-info__left" (click)="isDropdownOpen = !isDropdownOpen">
+      <div class="admin-img">
+        <img class="admin-avatar" src="https://e-ticket-admin.railway.uz/img/avatars/1.jpg" alt="admin image">
+      </div>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="admin-info__right">
+      <div class="admin-email">olga.yugay@gmail.com</div>
+      <div class="admin-status">[ACCOUNTANT, ADMIN, CONTROLLER, USER]</div>
+    </div>
+
+    <div *ngIf="isDropdownOpen" class="admin-dropdown">
+      <div class="admin-dropdown__top">
+        <a class="admin-dropdown__link" href="#">Мои данные</a>
+        <a class="admin-dropdown__link" href="#">Сменить пароль</a>
+      </div>
+      <div class="admin-dropdown__bottom">
+        <a class="admin-dropdown__link" href="#">Выход</a>
+      </div>
+    </div>
+  </div>
+</header>

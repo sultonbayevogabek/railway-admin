@@ -1,0 +1,205 @@
+<aside [class.sidebar--close]="!isSidebarOpen" class="sidebar">
+  <div class="sidebar__header">
+    <div class="sidebar__logo"></div>
+    <div class="hamburger" (click)="toggleSidebar()">
+      <div [class.active]="isSidebarOpen" class="hamburger__line hamburger__line--top"></div>
+      <div [class.active]="isSidebarOpen" class="hamburger__line hamburger__line--bottom"></div>
+    </div>
+  </div>
+  <div class="sidebar__body" (mouseenter)="openSidebarOnHover()" (mouseleave)="closeSidebarOnLeave()">
+    <ul class="accordion">
+      <li class="accordion__item">
+        <div class="accordion__label">
+          <span class="accordion__icon">
+            <i class="accordion__icon fas fa-users"></i>
+          </span>
+          <span class="accordion__text">Пользователи</span>
+          <i class="accordion__arrow fas fa-chevron-down"></i>
+        </div>
+
+        <ul class="accordion-inner">
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/users" routerLinkActive="accordion-inner__link--active">Физ. пользователи</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/legal-users" routerLinkActive="accordion-inner__link--active">Юр. лицо</a>
+          </li>
+        </ul>
+      </li>
+      <li class="accordion__item">
+        <div class="accordion__label">
+          <span class="accordion__icon">
+            <i class=" fas fa-bookmark"></i>
+          </span>
+          <span class="accordion__text">Заказы</span>
+          <i class="accordion__arrow fas fa-chevron-down"></i>
+        </div>
+
+        <ul class="accordion-inner">
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/orders" routerLinkActive="accordion-inner__link--active">Заказы</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/legal-orders" routerLinkActive="accordion-inner__link--active">Заказы юр-лиц</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/payment-failed-orders" routerLinkActive="accordion-inner__link--active">Заказы с ошибкой оплаты</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/apelsin-orders" routerLinkActive="accordion-inner__link--active">Заказы APELSIN</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" href="#" routerLinkActive="accordion-inner__link--active">Аналитика заказов</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/tickets" routerLinkActive="accordion-inner__link--active">Билеты</a>
+          </li>
+        </ul>
+      </li>
+      <li class="accordion__item">
+        <div class="accordion__label">
+          <span class="accordion__icon">
+            <i class=" fas fa-concierge-bell"></i>
+          </span>
+          <span class="accordion__text">Сервисы</span>
+          <i class="accordion__arrow fas fa-chevron-down"></i>
+        </div>
+
+        <ul class="accordion-inner">
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/sms" routerLinkActive="accordion-inner__link--active">Смс</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/invoice" routerLinkActive="accordion-inner__link--active">Счет-фактуры</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/notice" routerLinkActive="accordion-inner__link--active">Push-уведомления</a>
+          </li>
+        </ul>
+      </li>
+      <li class="accordion__item">
+        <div class="accordion__label">
+          <span class="accordion__icon">
+            <i class="fas fa-money-check-alt"></i>
+          </span>
+          <span class="accordion__text">Stripe</span>
+          <i class="accordion__arrow fas fa-chevron-down"></i>
+        </div>
+
+        <ul class="accordion-inner">
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/payment-intentions" routerLinkActive="accordion-inner__link--active">Платежные намерения</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/dispute" routerLinkActive="accordion-inner__link--active">Споры</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/returns" routerLinkActive="accordion-inner__link--active">Возвраты</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/payout" routerLinkActive="accordion-inner__link--active">Выплата</a>
+          </li>
+        </ul>
+      </li>
+      <li class="accordion__item">
+        <div class="accordion__label">
+          <span class="accordion__icon">
+            <i class="fas fa-chart-area"></i>
+          </span>
+          <span class="accordion__text">Экспресс</span>
+          <i class="accordion__arrow fas fa-chevron-down"></i>
+        </div>
+
+        <ul class="accordion-inner">
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/stations" routerLinkActive="accordion-inner__link--active">Станции</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/create-station" routerLinkActive="accordion-inner__link--active">Создать новую станцию</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/trains" routerLinkActive="accordion-inner__link--active">Поезды</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/commission-fees" routerLinkActive="accordion-inner__link--active">Комиссионные сборы</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/create-commission" routerLinkActive="accordion-inner__link--active">Добавить комиссионные</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/wagons-description" routerLinkActive="accordion-inner__link--active">Описание вагонов</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/wagons-picture" routerLinkActive="accordion-inner__link--active">Картинки вагонов</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/wagons-review" routerLinkActive="accordion-inner__link--active">Отзывы вагонов</a>
+          </li>
+        </ul>
+      </li>
+      <li class="accordion__item">
+        <div class="accordion__label">
+          <span class="accordion__icon">
+            <i class="fas fa-chart-pie"></i>
+          </span>
+          <span class="accordion__text">Аналитика</span>
+          <i class="accordion__arrow fas fa-chevron-down"></i>
+        </div>
+
+        <ul class="accordion-inner">
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" href="#" routerLinkActive="accordion-inner__link--active">Доска графигов</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" href="#" routerLinkActive="accordion-inner__link--active">Диаграммы</a>
+          </li>
+        </ul>
+      </li>
+      <li class="accordion__item">
+        <div class="accordion__label">
+          <span class="accordion__icon">
+            <i class="fas fa-money-check"></i>
+          </span>
+          <span class="accordion__text">Бухгалтерское дело</span>
+          <i class="accordion__arrow fas fa-chevron-down"></i>
+        </div>
+
+        <ul class="accordion-inner">
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" href="#" routerLinkActive="accordion-inner__link--active">Поставщик</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" href="#" routerLinkActive="accordion-inner__link--active">Акт выполненных работ</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" href="#" routerLinkActive="accordion-inner__link--active">Ежедневный отчет</a>
+          </li>
+        </ul>
+      </li>
+      <li class="accordion__item">
+        <div class="accordion__label">
+          <span class="accordion__icon">
+            <i class="fas fa-cloud"></i>
+          </span>
+          <span class="accordion__text">Склад</span>
+          <i class="accordion__arrow fas fa-chevron-down"></i>
+        </div>
+
+        <ul class="accordion-inner">
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/product" routerLinkActive="accordion-inner__link--active">Товар</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/insurance-policies" routerLinkActive="accordion-inner__link--active">Страховые полиса</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/add-income-product" routerLinkActive="accordion-inner__link--active">Добавить приход товар</a>
+          </li>
+          <li class="accordion-inner__item">
+            <a class="accordion-inner__link" routerLink="/cabinet/inventory" routerLinkActive="accordion-inner__link--active">Инвентарь</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</aside>

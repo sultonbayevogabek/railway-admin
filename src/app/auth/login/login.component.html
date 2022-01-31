@@ -1,0 +1,36 @@
+<div class="login">
+  <div class="login__card">
+    <form class="login__form form" [formGroup]="loginForm">
+      <div class="form__body">
+        <h1 class="form__heading">
+          <div>АКЦИОНЕРНОЕ ОБЩЕСТВО,</div>
+          <div>O’ZBEKISTON TEMIR YO’LLARI</div>
+        </h1>
+        <label class="form__label">
+          <input
+            class="form__input form-control"
+            type="email"
+            placeholder="Введите логин..."
+            formControlName="email"
+          >
+        </label>
+        <label class="form__label">
+          <input
+            class="form__input form-control"
+            type="password"
+            placeholder="Введите пароль..."
+            formControlName="password"
+          >
+        </label>
+      </div>
+      <div class="form__footer">
+        <button
+          class="form__submit btn btn-primary"
+          type="submit"
+          [disabled]="loginForm.invalid"
+        >Логин</button>
+      </div>
+    </form>
+  </div>
+  <p class="login__copy">Copyright © AxonLogic 2022</p>
+</div>

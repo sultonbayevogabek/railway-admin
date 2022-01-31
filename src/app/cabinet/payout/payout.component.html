@@ -1,0 +1,196 @@
+<header class="app-header">
+  <div class="app-header__icon">
+    <i class="fas fa-bookmark"></i>
+  </div>
+  <div class="app-header__text">
+    <h2 class="app-header__heading">Таблица payouts</h2>
+    <p class="app-header__description">Список Payouts</p>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="app-card">
+    <div class="statistic">
+      <div class="statistic__header">
+        <h2 class="statistic__heading">Баланс Производительности MP</h2>
+      </div>
+      <div class="statistic__body row">
+        <div class="col-3 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-success">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-success">+ PAID +</div>
+            <div class="statistic__value">£ 391797.51</div>
+            <a class="d-flex align-items-center small" href="#">
+              <span class="text-info me-2">Количество: </span>
+              <span class="text-danger">22321</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-3 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">+ IN_TRANSIT +</div>
+            <div class="statistic__value">£ 391797.51</div>
+            <a class="d-flex align-items-center small" href="#">
+              <span class="text-info me-2">Количество: </span>
+              <span class="text-danger">22321</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-3 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">+ PENDING +</div>
+            <div class="statistic__value">£ 391797.51</div>
+            <a class="d-flex align-items-center small" href="#">
+              <span class="text-info me-2">Количество: </span>
+              <span class="text-danger">22321</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-3 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">+ REFUNDED +</div>
+            <div class="statistic__value">£ 391797.51</div>
+            <a class="d-flex align-items-center small" href="#">
+              <span class="text-info me-2">Количество: </span>
+              <span class="text-danger">22321</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="statistic">
+      <div class="statistic__header">
+        <h2 class="statistic__heading">Баланс Производительности JD</h2>
+      </div>
+      <div class="statistic__body row">
+        <div class="col-3 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-success">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-success">+ ACCEPTED +</div>
+            <div class="statistic__value">£ 391797.51</div>
+            <a class="d-flex align-items-center small" href="#">
+              <span class="text-info me-2">До: </span>
+              <span class="text-danger">2022-01-14</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-3 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">+ PENDING +</div>
+            <div class="statistic__value">£ 391797.51</div>
+            <a class="d-flex align-items-center small" href="#">
+              <span class="text-info me-2">До: </span>
+              <span class="text-danger">2022-01-14</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-card">
+    <div class="data-filter">
+      <div class="data-filter__part">
+        <label for="count">На одной странице: </label>
+        <select class="form-control" name="count" id="count">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <div class="data-filter__part">
+        <label for="search">Поиск: </label>
+        <input class="form-control" id="search" type="text">
+      </div>
+    </div>
+    <table class="data-table table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>ID Payout</th>
+        <th>Сумма выплаты</th>
+        <th>Сумма выплаты с комиссией</th>
+        <th>Дата</th>
+        <th>Статус платежа(MP)</th>
+        <th>Статус платежа(JD)</th>
+        <th>Действие</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>po_1KMOX7Bu5zOI7DDgGT1AzrKF</td>
+          <td>£ 501.89</td>
+          <td>£ 536.72</td>
+          <td>2022-01-31 05:00:00</td>
+          <td>
+            <span class="badge bg-warning">IN_TRANSIT</span>
+          </td>
+          <td>
+            <button class="btn data-action">
+              <i class="fas fa-download me-2"></i>
+              <span>Accept</span>
+            </button>
+          </td>
+          <td>
+            <a class="data-action" href="#">
+              <i class="fas fa-clipboard"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <th>ID Payout</th>
+        <th>Сумма выплаты</th>
+        <th>Сумма выплаты с комиссией</th>
+        <th>Дата</th>
+        <th>Статус платежа(MP)</th>
+        <th>Статус платежа(JD)</th>
+        <th>Действие</th>
+      </tr>
+      </tfoot>
+    </table>
+    <div class="data-total">
+      <div class="data-total__part">
+        10 на каждой странице. Общее количество 234423
+      </div>
+
+      <div class="data-total__part">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Предыдущий</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Следующий</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,52 @@
+<header class="app-header">
+  <div class="app-header__icon">
+    <i class="fas fa-chart-area"></i>
+  </div>
+  <div class="app-header__text">
+    <h2 class="app-header__heading">Создать комиссию</h2>
+  </div>
+</header>
+<main class="app-main">
+  <form class="app-card">
+    <div class="row">
+      <div class="col-6">
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Тип комиссии</span>
+          <select class="form-control">
+            <option value="Domestic">Комиссия для внутренних поездов, кроме Афросиаба</option>
+            <option value="DomesticAfrasiyab">Комиссия для поездов Афросиаб</option>
+            <option value="NonDomestic">Комиссия для поездов, перевозчиком которых является другое государство</option>
+            <option value="DomesticToCIS">Комиссия для межгосударственные поезда в сообщении со странами СНГ формирования АО УТЙ</option>
+            <option value="TulparTalgo">Комиссия для межгосударственный поезд Тульпар Тальго 001/002 (Алматы-Ташкент-Алматы)</option>
+          </select>
+        </label>
+      </div>
+      <div class="col-6">
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Комиссия</span>
+          <input class="form-control" placeholder="Комиссия" required>
+        </label>
+      </div>
+      <div class="col-12">
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Описание</span>
+          <textarea class="form-control" style="min-height: 200px" placeholder="Описание" required></textarea>
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <button class="btn btn-primary w-100" type="submit">
+          <i class="fas fa-save me-2"></i>
+          <span>Сохранить</span>
+        </button>
+      </div>
+      <div class="col-2">
+        <a class="btn btn-warning w-100" routerLink="/cabinet/commission-fees">
+          <i class="fas fa-arrow-left me-2"></i>
+          <span>Назад</span>
+        </a>
+      </div>
+    </div>
+  </form>
+</main>

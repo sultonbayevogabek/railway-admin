@@ -1,0 +1,253 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.app-header__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 30px 0 0;
+  background: #fff;
+  box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%), 0 0.9375rem 1.40625rem rgb(4 9 20 / 3%), 0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+  border-radius: 4px;
+  font-size: 32px;
+  color: #3ac47d;
+}
+
+.app-header__heading {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.app-header__description {
+  padding: 3px 0 0;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.app-header__filter {
+  margin-left: auto;
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+.app-main {
+  padding: 30px 30px 60px;
+}
+
+.app-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  background-clip: border-box;
+  box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%), 0 0.9375rem 1.40625rem rgb(4 9 20 / 3%), 0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+  overflow: auto;
+
+  .form-control {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+.app-card__heading {
+  font-size: 14px;
+  color: #495057;
+  font-weight: 700;
+}
+
+.btn {
+  white-space: nowrap;
+}
+
+.data-table {
+  min-width: 1500px;
+  font-size: 14px;
+  color: #495057;
+}
+
+tbody, tfoot {
+  border-top: none !important;
+}
+
+th {
+  white-space: nowrap;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: rgba(0, 0, 0, 0.03);
+  color: var(--bs-table-striped-color);
+}
+
+.data-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+}
+
+.data-filter__part {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  label {
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  select {
+    width: 100px;
+  }
+
+  .form-control {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+  }
+}
+
+.form-label {
+  font-size: 14px;
+
+  .form-control {
+    font-size: 14px;
+  }
+}
+
+.data-action {
+  width: max-content;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #0D6EFD;
+  border: 2px solid #0D6EFD;
+  border-radius: 4px;
+  transition: 0.2s all ease;
+
+  &:hover {
+    color: #fff;
+    background-color: #0D6EFD;
+  }
+}
+
+.data-action--edit {
+  color: #FFC107;
+  border: 2px solid #FFC107;
+
+  &:hover {
+    color: #000000;
+    background-color: #FFC107;
+  }
+}
+
+.details-control {
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/assets/img/details_open.png");
+  cursor: pointer;
+
+  &--close {
+    background-image: url("/assets/img/details_close.png");
+  }
+}
+
+.data-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+}
+
+.pagination {
+  margin-bottom: 0;
+}
+
+.statistic__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(26, 54, 126, 0.125);;
+}
+
+.statistic__heading {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(13, 27, 62, 0.7);;
+}
+
+.statistic__filter {
+  display: flex;
+  align-items: center;
+
+  label {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.statistic__body {
+  padding-top: 20px;
+}
+
+.statistic__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 55px;
+  height: 55px;
+  margin-right: 16px;
+  border-radius: 50%;
+
+  .fas {
+    font-size: 20px;
+    color: #fff !important;
+  }
+}
+
+.statistic__value {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1;
+  margin: 10px auto;
+  color: #495057;
+}

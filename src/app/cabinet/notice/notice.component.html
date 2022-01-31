@@ -1,0 +1,142 @@
+<header class="app-header">
+  <div class="app-header__icon">
+    <i class="fas fa-concierge-bell"></i>
+  </div>
+  <div class="app-header__text">
+    <h2 class="app-header__heading">Уведомление</h2>
+    <p class="app-header__description">Список push-уведомлений</p>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="app-card">
+    <form class="notice-form">
+      <div class="row">
+        <div class="col-4">
+          <h2 class="notice-heading">O'ZBEK TILIDA</h2>
+          <label class="notice-label form-label d-block">
+            <span class="notice-label__text">Xabarnoma sarlavhasi</span>
+            <input class="notice-input form-control" type="text" placeholder="Sarlavha">
+          </label>
+          <label class="notice-label form-label d-block">
+            <span class="notice-label__text">Xabarnoma matni</span>
+            <textarea class="notice-input notice-textarea form-control" placeholder="Matn"></textarea>
+          </label>
+        </div>
+        <div class="col-4">
+          <h2 class="notice-heading">НА РУССКОМ</h2>
+          <label class="notice-label form-label d-block">
+            <span class="notice-label__text">Заголовок на русском языке</span>
+            <input class="notice-input form-control" type="text" placeholder="Заголовок">
+          </label>
+          <label class="notice-label form-label d-block">
+            <span class="notice-label__text">Сообщение на русском языке</span>
+            <textarea class="notice-input notice-textarea form-control" placeholder="Сообщение"></textarea>
+          </label>
+        </div>
+        <div class="col-4">
+          <h2 class="notice-heading">IN ENGLISH</h2>
+          <label class="notice-label form-label d-block">
+            <span class="notice-label__text">Push notification header in english</span>
+            <input class="notice-input form-control" type="text" placeholder="Header">
+          </label>
+          <label class="notice-label form-label d-block">
+            <span class="notice-label__text">Push notification message in english</span>
+            <textarea class="notice-input notice-textarea form-control" placeholder="Message"></textarea>
+          </label>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-4">
+          <button class="notice-btn btn btn-success w-100">
+            <i class="fas fa-sms me-3"></i>
+            <span>Создать</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="app-card">
+    <div class="data-filter">
+      <div class="data-filter__part">
+        <label for="count">На одной странице: </label>
+        <select class="form-control" name="count" id="count">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <div class="data-filter__part">
+        <label for="search">Поиск: </label>
+        <input class="form-control" id="search" type="text">
+      </div>
+    </div>
+    <table class="data-table table table-bordered table-hover table-striped">
+      <thead>
+      <tr>
+        <th>Заголовок</th>
+        <th>Sarlavha</th>
+        <th>Header</th>
+        <th>Сообщение</th>
+        <th>Xabar</th>
+        <th>Message</th>
+        <th>Тип уведомления</th>
+        <th>Созданное время</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Внимание!</td>
+        <td>Diqqat!	</td>
+        <td>Attention!</td>
+        <td>Внимание! С 09.01.22г. "Афросияб" 765ф стал уходить раньше! Отправление с Бухары в 4:31 (не 4:50) с Навои в 5:10 (не 5:35) с Самарканда в 6:11 (не 6:35)!</td>
+        <td>Diqqat! 09.01.2022 yildan 765ф "Afrosiyob" poyezdining jo`nash vaqti o`zgardi! Jo`nash vaqti Buxorodan 4:31 (4:50 emas) Navoidan 5:10 ( 5:35 emas) Samarqanddan 6:11 (6:35 emas )!</td>
+        <td>Attention! From 09/01/22 "Afrosiyab" 765ph began to leave earlier! Departure from Bukhara at 4:31 (not 4:50) from Navoi at 5:10 (not 5:35) from Samarkand at 6:11 (not 6:35)!</td>
+        <td>9620c43ee8164818ab24e8f9b1645be1</td>
+        <td>Public</td>
+        <td>2022-01-10 21:23:59</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <th>Заголовок</th>
+        <th>Sarlavha</th>
+        <th>Header</th>
+        <th>Сообщение</th>
+        <th>Xabar</th>
+        <th>Message</th>
+        <th>Тип уведомления</th>
+        <th>Созданное время</th>
+      </tr>
+      </tfoot>
+    </table>
+    <div class="data-total">
+      <div class="data-total__part">
+        10 уведомление на каждой странице. Общее количество уведомлении 234423
+      </div>
+
+      <div class="data-total__part">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Предыдущий</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Следующий</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>

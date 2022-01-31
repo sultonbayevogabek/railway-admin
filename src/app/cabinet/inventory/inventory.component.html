@@ -1,0 +1,90 @@
+<header class="app-header">
+  <div class="app-header__icon">
+    <i class="fas fa-cloud"></i>
+  </div>
+  <div class="app-header__text">
+    <h2 class="app-header__heading">Инвентарь</h2>
+    <p class="app-header__description">Смотрите здесь информацию об оставшихся и проданных страховых полисах</p>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="app-card app-card--users">
+    <div class="data-filter">
+      <div class="data-filter__part">
+        <label for="count">На одной странице: </label>
+        <select class="form-control" name="count" id="count">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <div class="data-filter__part">
+        <label for="search">Поиск: </label>
+        <input class="form-control" id="search" type="text">
+      </div>
+    </div>
+    <table class="data-table table table-bordered table-hover table-striped">
+      <thead>
+      <tr>
+        <th>Название товара</th>
+        <th>Цена товара</th>
+        <th>В наличии</th>
+        <th>Последнее обновление</th>
+        <th>Действие</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Страховой полис - JD2020INCUZ</td>
+        <td>3000</td>
+        <td>2172</td>
+        <td>2021-02-18 15:11:47</td>
+        <td>
+          <a class="data-action data-action--edit" href="#" title="Изменить">
+            <i class="fas fa-edit"></i>
+          </a>
+        </td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <th>Название товара</th>
+        <th>Цена товара</th>
+        <th>В наличии</th>
+        <th>Последнее обновление</th>
+        <th>Действие</th>
+      </tr>
+      </tfoot>
+    </table>
+    <div class="data-total">
+      <div class="data-total__part">
+        10 товар на каждой странице. Общее количество товаров 234423
+      </div>
+
+      <div class="data-total__part">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Предыдущий</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Следующий</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>
+

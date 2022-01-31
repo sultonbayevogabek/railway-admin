@@ -1,0 +1,328 @@
+<header class="app-header">
+  <div class="app-header__icon">
+    <i class="fas fa-bookmark"></i>
+  </div>
+  <div class="app-header__text">
+    <h2 class="app-header__heading">Таблица билетов</h2>
+    <p class="app-header__description">Жд веб сайты зарегистрированные билетов</p>
+  </div>
+  <div class="app-header__filter">
+    <button class="btn btn-primary me-1">
+      <i class="fas fa-filter me-2"></i>
+      <span>Фильтр</span>
+    </button>
+    <button class="btn btn-warning">
+      <i class="fas fa-trash me-2"></i>
+      <span>Очистить</span>
+    </button>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="app-card">
+    <div class="statistic">
+      <div class="statistic__header">
+        <h2 class="statistic__heading">Баланс по каждому платежу (со страховкой)</h2>
+
+        <div class="statistic__filter">
+          <label class="me-4" for="from-date">
+            <span class="me-1">От: </span>
+            <input class="form-control" id="from-date" type="date">
+          </label>
+          <label class="me-4" for="to-date">
+            <span class="me-1">До: </span>
+            <input class="form-control" id="to-date" type="date">
+          </label>
+          <button class="btn btn-outline-dark">Считать</button>
+        </div>
+      </div>
+      <div class="statistic__body row">
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-success">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-success">HAMKORBANK</div>
+            <div class="statistic__value">5,298,000 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">KAPITALBANK</div>
+            <div class="statistic__value">0 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-info">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-info">PAYME</div>
+            <div class="statistic__value">19,152,000 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-danger">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-danger">STRIPE</div>
+            <div class="statistic__value">1,107,000 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">CLICK</div>
+            <div class="statistic__value">0 сум</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="statistic">
+      <div class="statistic__header">
+        <h2 class="statistic__heading">Сумма страховки по каждому платежу</h2>
+      </div>
+      <div class="statistic__body row">
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-success">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-success">HAMKORBANK</div>
+            <div class="statistic__value">2,686,631,570 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">KAPITALBANK</div>
+            <div class="statistic__value">34,433,850 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-info">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-info">PAYME</div>
+            <div class="statistic__value">8,902,039,360 сум</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-danger">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-danger">STRIPE</div>
+            <div class="statistic__value">£ 34355.58</div>
+          </div>
+        </div>
+        <div class="col-4 d-flex align-items-start mb-5">
+          <div class="statistic__icon bg-warning">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <div class="statistic__info">
+            <div class="statistic__name badge bg-warning">CLICK</div>
+            <div class="statistic__value">0 сум</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-card">
+    <div class="data-filter">
+      <div class="data-filter__part">
+        <label for="count">На одной странице: </label>
+        <select class="form-control" name="count" id="count">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <div class="data-filter__part">
+        <label for="search">Поиск: </label>
+        <input class="form-control" id="search" type="text">
+      </div>
+    </div>
+    <table class="data-table table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>ID Express</th>
+        <th>ID заказа</th>
+        <th>Дата создания</th>
+        <th>Последняя обновления</th>
+        <th>Статус</th>
+        <th>Имя пассажира</th>
+        <th>Документ пассажира</th>
+        <th>Гражданство пассажира</th>
+        <th>Тариф</th>
+        <th>Станция отправления</th>
+        <th>Станция прибытия</th>
+        <th>Время отправления</th>
+        <th>Время прибытия</th>
+        <th>Тип вагона</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>23/11/2021</td>
+        <td>23/11/2021 23:44</td>
+        <td>ConfirmedTicket</td>
+        <td>ОGАY=ZАRINА=-</td>
+        <td>ПУАС2801007</td>
+        <td>UZB</td>
+        <td>100000</td>
+        <td>ТАШКЕНТ ПАСС ЦЕНТР.</td>
+        <td>САМАРКАНД</td>
+        <td>2022,1,18,18,45</td>
+        <td>2022,1,18,20,53</td>
+        <td>СИД</td>
+      </tr>
+      <tr>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>23/11/2021</td>
+        <td>23/11/2021 23:44</td>
+        <td>ConfirmedTicket</td>
+        <td>ОGАY=ZАRINА=-</td>
+        <td>ПУАС2801007</td>
+        <td>UZB</td>
+        <td>100000</td>
+        <td>ТАШКЕНТ ПАСС ЦЕНТР.</td>
+        <td>САМАРКАНД</td>
+        <td>2022,1,18,18,45</td>
+        <td>2022,1,18,20,53</td>
+        <td>СИД</td>
+      </tr>
+      <tr>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>23/11/2021</td>
+        <td>23/11/2021 23:44</td>
+        <td>ConfirmedTicket</td>
+        <td>ОGАY=ZАRINА=-</td>
+        <td>ПУАС2801007</td>
+        <td>UZB</td>
+        <td>100000</td>
+        <td>ТАШКЕНТ ПАСС ЦЕНТР.</td>
+        <td>САМАРКАНД</td>
+        <td>2022,1,18,18,45</td>
+        <td>2022,1,18,20,53</td>
+        <td>СИД</td>
+      </tr>
+      <tr>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>23/11/2021</td>
+        <td>23/11/2021 23:44</td>
+        <td>ConfirmedTicket</td>
+        <td>ОGАY=ZАRINА=-</td>
+        <td>ПУАС2801007</td>
+        <td>UZB</td>
+        <td>100000</td>
+        <td>ТАШКЕНТ ПАСС ЦЕНТР.</td>
+        <td>САМАРКАНД</td>
+        <td>2022,1,18,18,45</td>
+        <td>2022,1,18,20,53</td>
+        <td>СИД</td>
+      </tr>
+      <tr>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>23/11/2021</td>
+        <td>23/11/2021 23:44</td>
+        <td>ConfirmedTicket</td>
+        <td>ОGАY=ZАRINА=-</td>
+        <td>ПУАС2801007</td>
+        <td>UZB</td>
+        <td>100000</td>
+        <td>ТАШКЕНТ ПАСС ЦЕНТР.</td>
+        <td>САМАРКАНД</td>
+        <td>2022,1,18,18,45</td>
+        <td>2022,1,18,20,53</td>
+        <td>СИД</td>
+      </tr>
+      <tr>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>6d1a886d-d091-4e7b-a633-991ff41e16f4</td>
+        <td>23/11/2021</td>
+        <td>23/11/2021 23:44</td>
+        <td>ConfirmedTicket</td>
+        <td>ОGАY=ZАRINА=-</td>
+        <td>ПУАС2801007</td>
+        <td>UZB</td>
+        <td>100000</td>
+        <td>ТАШКЕНТ ПАСС ЦЕНТР.</td>
+        <td>САМАРКАНД</td>
+        <td>2022,1,18,18,45</td>
+        <td>2022,1,18,20,53</td>
+        <td>СИД</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <th>ID</th>
+        <th>ID Express</th>
+        <th>ID заказа</th>
+        <th>Дата создания</th>
+        <th>Последняя обновления</th>
+        <th>Статус</th>
+        <th>Имя пассажира</th>
+        <th>Документ пассажира</th>
+        <th>Гражданство пассажира</th>
+        <th>Тариф</th>
+        <th>Станция отправления</th>
+        <th>Станция прибытия</th>
+        <th>Время отправления</th>
+        <th>Время прибытия</th>
+        <th>Тип вагона</th>
+      </tr>
+      </tfoot>
+    </table>
+    <div class="data-total">
+      <div class="data-total__part">
+        10 билетов на каждой странице. Общее количество билетов 234423
+      </div>
+
+      <div class="data-total__part">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Предыдущий</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Следующий</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>

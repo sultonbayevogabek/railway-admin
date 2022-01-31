@@ -1,0 +1,126 @@
+<header class="app-header">
+  <div class="app-header__icon">
+    <i class="fas fa-chart-area"></i>
+  </div>
+  <div class="app-header__text">
+    <h2 class="app-header__heading">Создать новую станцию</h2>
+  </div>
+</header>
+<main class="app-main">
+  <form class="app-card">
+    <div class="row">
+      <div class="col-6">
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Полное имя</span>
+          <input class="form-control" type="text" placeholder="Полное имя" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Имя узбекское</span>
+          <input class="form-control" type="text" placeholder="Имя узбекское" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Имя русский</span>
+          <input class="form-control" type="text" placeholder="Имя русский" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Имя английский</span>
+          <input class="form-control" type="text" placeholder="Имя английский" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Код станции</span>
+          <input class="form-control" type="number" placeholder="Код станции" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Адрес станции</span>
+          <input class="form-control" type="text" placeholder="Адрес станции" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Станционный телефон</span>
+          <input class="form-control" type="tel" placeholder="Станционный телефон" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Станция долгота</span>
+          <input class="form-control" type="text" placeholder="Станция долгота" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Станция широта</span>
+          <input class="form-control" type="text" placeholder="Станция широта" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Code ECR</span>
+          <input class="form-control" type="text" placeholder="Code ECR" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">GOS</span>
+          <input class="form-control" type="text" placeholder="GOS" required>
+        </label>
+      </div>
+      <div class="col-6">
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">DOR</span>
+          <input class="form-control" type="text" placeholder="DOR" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">OTD</span>
+          <input class="form-control" type="text" placeholder="OTD" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Дата отклонения</span>
+          <input class="form-control" type="date" placeholder="Дата отклонения" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Дата отказаться от использования</span>
+          <input class="form-control" type="date" placeholder="Дата отказаться от использования" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">SF</span>
+          <input class="form-control" type="text" placeholder="SF" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">SIGN</span>
+          <input class="form-control" type="text" placeholder="SIGN" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Дата начала</span>
+          <input class="form-control" type="date" placeholder="Дата начала" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Дата использование</span>
+          <input class="form-control" type="date" placeholder="Дата использование" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">Тип</span>
+          <input class="form-control" type="text" placeholder="Тип" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">VRL</span>
+          <input class="form-control" type="text" placeholder="VRL" required>
+        </label>
+        <label class="form-label d-block mb-3">
+          <span class="d-block mb-1">VRZ</span>
+          <input class="form-control" type="text" placeholder="VRZ" required>
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <label class="form-label d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox">
+          <span>Показывать</span>
+        </label>
+      </div>
+      <div class="col-2">
+        <button class="btn btn-primary w-100" type="submit">
+          <i class="fas fa-save me-2"></i>
+          <span>Сохранить</span>
+        </button>
+      </div>
+      <div class="col-2">
+        <a class="btn btn-warning w-100" routerLink="/cabinet/stations">
+          <i class="fas fa-arrow-left me-2"></i>
+          <span>Назад</span>
+        </a>
+      </div>
+    </div>
+  </form>
+</main>

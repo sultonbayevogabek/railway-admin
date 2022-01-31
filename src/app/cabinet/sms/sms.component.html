@@ -1,0 +1,138 @@
+<header class="app-header">
+  <div class="app-header__icon">
+    <i class="fas fa-concierge-bell"></i>
+  </div>
+  <div class="app-header__text">
+    <h2 class="app-header__heading">Таблица смс</h2>
+    <p class="app-header__description">Все сообщения, уведомляющие пользователей об отправлении поезда.</p>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="app-card">
+    <form class="get-report">
+      <div class="row">
+        <div class="col-3 d-flex align-items-center">
+          <label class="me-2" for="from-date">От: </label>
+          <input class="form-control" id="from-date" type="date">
+        </div>
+        <div class="col-3 d-flex align-items-center">
+          <label class="me-2" for="to-date">До: </label>
+          <input class="form-control" id="to-date" type="date">
+        </div>
+        <div class="col-3">
+          <button class="btn btn-primary">
+            <i class="fas fa-download me-1"></i>
+            <span>Получить отчет</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="app-card">
+    <div class="data-filter">
+      <div class="data-filter__part">
+        <label for="count">На одной странице: </label>
+        <select class="form-control" name="count" id="count">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <div class="data-filter__part">
+        <label for="search">Поиск: </label>
+        <input class="form-control" id="search" type="text">
+      </div>
+    </div>
+    <table class="data-table table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>ID смс</th>
+        <th>Телефон для уведомления</th>
+        <th>Состояние</th>
+        <th>Время отправки</th>
+        <th>ID с сайта PlayMobile</th>
+        <th>Module</th>
+        <th>Entity ID</th>
+        <th>Express ID</th>
+        <th>Действие</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sms of smsList">
+          <td>{{ sms.identifier }}</td>
+          <td>{{ sms.phone }}</td>
+          <td>
+            <div
+              class="badge"
+              [ngClass]="{
+                'bg-warning': sms.smsState === 'PENDING',
+                'bg-danger': sms.smsState === 'CANCELLED',
+                'bg-success': sms.smsState === 'SENT',
+                'bg-secondary': sms.smsState === 'UNKNOWN'
+              }"
+            >
+              {{
+              sms.smsState === 'PENDING' ? 'НА ОЖИДАНИИ' : sms.smsState === 'CANCELLED' ?
+              'ОТМЕНЕН' : sms.smsState === 'SENT' ? 'ОТПРАВЛЕНО' : 'НЕИЗВЕСТНЫЙ'
+              }}
+            </div>
+          </td>
+          <td>
+            {{ sms.timeToSend }}
+          </td>
+          <td>{{ sms.messageIds }}</td>
+          <td>{{ sms.entityType }}</td>
+          <td>{{ sms.entityId }}</td>
+          <td>{{ sms.expressId }}</td>
+          <td>
+            <a class="data-action" title="Посмотреть" routerLink="/cabinet/orders/{{ sms.identifier }}">
+              <i class="fas fa-clipboard"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <th>ID смс</th>
+        <th>Телефон для уведомления</th>
+        <th>Состояние</th>
+        <th>Время отправки</th>
+        <th>ID с сайта PlayMobile</th>
+        <th>Module</th>
+        <th>Entity ID</th>
+        <th>Express ID</th>
+        <th>Действие</th>
+      </tr>
+      </tfoot>
+    </table>
+    <div class="data-total">
+      <div class="data-total__part">
+        10 смс на каждой странице. Общее количество смсов 234423
+      </div>
+
+      <div class="data-total__part">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Предыдущий</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Следующий</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,62 @@
+<header class="app-header">
+  <div class="app-header__icon">
+    <i class="fas fa-wallet"></i>
+  </div>
+  <div class="app-header__text">
+    <h2 class="app-header__heading">Дашбоард</h2>
+    <p class="app-header__description">Настраиваемые поля лучше всего использовать для отображения чисел в удобной для
+      пользователя форме.</p>
+  </div>
+</header>
+
+<main class="app-main">
+  <form class="app-card">
+    <div class="row">
+      <div class="col-3 mb-4">
+        <label class="form-label" for="departure-date">Дата отправление</label>
+        <input class="form-control" id="departure-date" type="date">
+      </div>
+      <div class="col-3 mb-4">
+        <label class="form-label" for="arrival-date">Дата прибытие</label>
+        <input class="form-control" id="arrival-date" type="date">
+      </div>
+      <div class="col-3 mb-4">
+        <label class="form-label" for="departure">Отправление</label>
+        <input class="form-control" id="departure" type="text">
+      </div>
+      <div class="col-3 mb-4">
+        <label class="form-label" for="arrival">Прибытие</label>
+        <input class="form-control" id="arrival" type="text">
+      </div>
+      <div class="col-3">
+        <label class="form-label" for="service-class">Класс обслуживание</label>
+        <select class="form-control" id="service-class">
+          <option value="">Все</option>
+          <option value="ЛЮКС">ЛЮКС</option>
+          <option value="КУПЕ">КУПЕ</option>
+          <option value="СИД">СИД</option>
+          <option value="ОБЩ">ОБЩ</option>
+          <option value="ПЛАЦ">ПЛАЦ</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <label class="form-label" for="gender">Пол</label>
+        <select class="form-control" id="gender">
+          <option value="">Все</option>
+          <option value="M">Мужской</option>
+          <option value="F">Женский</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <div class="row crud-button">
+          <div class="col-6">
+            <button class="btn btn-danger w-100 py-1">Очистить</button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-primary w-100 py-1">Применить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</main>
